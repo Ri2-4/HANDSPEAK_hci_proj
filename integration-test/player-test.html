@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDSPEAK - Video Integration Test</title>
+</head>
+<body>
+
+    <h1>HANDSPEAK - Video Integration Test</h1>
+
+    <h2>Video Player</h2>
+
+    <video id="player" width="600" controls>
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support video playback.
+    </video>
+
+    <h2>Gesture Recognition</h2>
+
+    <button id="startButton">Start Gesture Control</button>
+
+    <br><br>
+
+    <video id="webcam" autoplay playsinline
+           width="300"></video>
+
+    <p id="gestureOutput">Waiting to start...</p>
+
+    <script type="module" src="player-test.js"></script>
+
+</body>
+</html>

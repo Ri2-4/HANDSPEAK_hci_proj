@@ -10,6 +10,8 @@ const startButton = document.getElementById("startButton");
 
 let recognizer = null;
 let lastVideoTime = -1;
+let lastDetectionTime = 0;
+const DETECTION_INTERVAL = 80;
 let cameraStarted = false;
 
 const CONFIDENCE_THRESHOLD = 0.60;
@@ -42,7 +44,11 @@ async function startCamera() {
         });
 
         const stream = await navigator.mediaDevices.getUserMedia({
-            video: true
+             video: {
+             width: { ideal: 640 },
+             height: { ideal: 480 },
+             frameRate: { ideal: 15, max: 15 }
+             }
         });
 
         video.srcObject = stream;
@@ -71,8 +77,13 @@ function detectGestures() {
         return;
     }
 
-    if (video.currentTime !== lastVideoTime) {
-        lastVideoTime = video.currentTime;
+    const now = performance.now();
+
+    if (
+    video.currentTime !== lastVideoTime &&
+    now - lastDetectionTime >= DETECTION_INTERVAL) {
+    lastVideoTime = video.currentTime;
+    lastDetectionTime = now;
 
         const results = recognizer.recognizeForVideo(
             video,
