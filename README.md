@@ -23,8 +23,8 @@ Users can select a video from the website's preloaded video library and control 
 | Hand Gesture     | Action             |
 |------------------|--------------------|
 | Open Palm 🖐️    | Play / Pause       |
-| Swipe Right ➡️  | Forward 10 seconds |
-| Swipe Left ⬅️   | Rewind 10 seconds  |
+| Pointing Up ☝️  | Forward 10 seconds |
+| I Love You 🤟   | Rewind 10 seconds  |
 | Thumb Up 👍     | Increase Volume    |
 | Thumb Down 👎   | Decrease Volume    |
 | Closed Fist ✊  | Mute / Unmute      |
