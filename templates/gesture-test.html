@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDSPEAK Gesture Integration</title>
+</head>
+<body>
+    <h1>HANDSPEAK Gesture Integration Test</h1>
+
+    <button id="connectButton">Start Webcam</button>
+
+    <br><br>
+
+    <video id="webcam" autoplay playsinline
+           style="width: 500px; max-width: 100%;"></video>
+
+    <h2>Detected Gesture:</h2>
+    <p id="gestureOutput">Waiting for webcam...</p>
+
+    <script type="module" src="/static/js/gestureIntegration.js"></script>
+</body>
+</html>
